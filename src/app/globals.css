@@ -1,2 +1,49 @@
 @import "tailwindcss";
 
+.navbar {
+  position: relative;
+}
+
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: black;
+  display: block;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+
+  width: 250px;
+  height: 100vh;
+
+  background: black;
+  color: white;
+
+  transition: right 0.3s ease;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 40px;
+}
+
+.menu li {
+  margin: 20px 0;
+}
+
+.menu.show {
+  right: 0;
+}
